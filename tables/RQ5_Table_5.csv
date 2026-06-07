@@ -1,0 +1,11 @@
+Country,Bloc,Justice Score (0-1),Loss & Damage Refs,Intergenerational Refs,Gender Refs,Indigenous Refs,Discourse Richness
+WSM,AOSIS/SIDS,0.171,37,7,33,2,High
+GEO,Europe/Umbrella,0.115,4,4,4,1,High
+ARM,Europe/Umbrella,0.076,7,21,36,9,Medium
+SLE,African Group,0.074,23,50,96,8,Medium
+NRU,AOSIS/SIDS,0.068,14,2,22,6,Medium
+PLW,Other,0.047,15,4,15,3,Low
+KOR,East Asia,0.037,3,2,1,1,Low
+IND,BASIC,0.032,4,3,1,1,Low
+SAU,G77+China,0.027,5,0,2,1,Low
+COL,G77+China,0.009,1,0,0,38,Low

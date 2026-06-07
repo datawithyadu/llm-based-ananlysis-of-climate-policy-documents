@@ -1,0 +1,11 @@
+Country pair,Cosine similarity,Paris target gap,Alignment
+ARM - WSM,0.268,Large,Weak
+WSM - PLW,0.221,Large,Weak
+ARM - SAU,0.19,Large,Weak
+GEO - PLW,0.178,Large,Weak
+WSM - SAU,0.178,Large,Weak
+SLE - WSM,0.177,Large,Weak
+ARM - PLW,0.176,Large,Weak
+SLE - PLW,0.172,Large,Weak
+PLW - SAU,0.171,Large,Weak
+KOR - PLW,0.169,Large,Weak

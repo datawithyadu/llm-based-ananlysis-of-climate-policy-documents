@@ -1,0 +1,8 @@
+Country,Region,Ambiguity Score (0-1),Vague Phrases/1000w,Top Hedge Phrase,Level
+SAU,Middle East,0.75,26.2,shall endeavour to,High
+SLE,Sub-Saharan Africa,0.7,24.5,as appropriate,High
+COL,Latin America,0.6,21.0,intends to achieve,Medium
+IND,South Asia,0.55,19.2,will consider,Medium
+KOR,East Asia,0.45,15.8,aims to,Medium
+DEU,Europe,0.25,8.8,will reduce by,Low
+GBR,Europe,0.2,7.0,commits to,Low

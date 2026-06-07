@@ -1,0 +1,8 @@
+pdfplumber
+anthropic
+datasets
+scikit-learn
+matplotlib
+scipy
+pandas
+numpy

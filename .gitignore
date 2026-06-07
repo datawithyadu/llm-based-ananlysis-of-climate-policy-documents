@@ -1,0 +1,34 @@
+# API Keys & Secrets
+.env
+*.env
+secrets.json
+kaggle.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Logs & temp files
+*.log
+*.tmp
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large data files (use ndc_urls.json instead)
+*.pdf
+data/*.pdf

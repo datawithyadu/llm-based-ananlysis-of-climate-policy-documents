@@ -1,103 +1,163 @@
 {
   "dataset_sources": {
     "UNFCCC_NDC_Registry": {
-      "description": "Official UNFCCC NDC Registry \u2014 browse and download all countries' NDC documents",
+      "description": "Official UNFCCC NDC Registry — browse and download all countries' NDC documents",
       "url": "https://unfccc.int/NDCREG",
-      "used_in": [
-        "RQ1",
-        "RQ2",
-        "RQ3",
-        "RQ4",
-        "RQ5"
-      ]
+      "used_in": ["RQ1", "RQ2", "RQ3", "RQ4", "RQ5"]
     },
     "ClimateBERT_climate_specificity": {
-      "description": "HuggingFace dataset \u2014 labelled climate policy sentences (SPECIFIC/VAGUE)",
+      "description": "HuggingFace dataset — labelled climate policy sentences (SPECIFIC/VAGUE)",
       "url": "https://huggingface.co/datasets/climatebert/climate_specificity",
       "load_code": "load_dataset('climatebert/climate_specificity')",
-      "used_in": [
-        "RQ1"
-      ]
+      "used_in": ["RQ1"]
+    },
+    "ClimateBERT_environmental_claims": {
+      "description": "HuggingFace dataset — labelled environmental claims for greenwashing scoring reference",
+      "url": "https://huggingface.co/datasets/climatebert/environmental_claims",
+      "load_code": "load_dataset('climatebert/environmental_claims')",
+      "used_in": ["RQ4"]
+    },
+    "ClimatePolicyRadar_national_climate_targets": {
+      "description": "ClimatePolicyRadar — national climate targets dataset for RQ3 commitment extraction few-shots",
+      "url": "https://huggingface.co/datasets/ClimatePolicyRadar/national-climate-targets",
+      "load_code": "load_dataset('ClimatePolicyRadar/national-climate-targets')",
+      "used_in": ["RQ3"]
     },
     "IGES_NDC_Database": {
-      "description": "Institute for Global Environmental Strategies NDC Database \u2014 country metadata and NDC round tracking",
+      "description": "Institute for Global Environmental Strategies NDC Database — country metadata and NDC round tracking",
       "url": "https://www.iges.or.jp/en/pub/iges-ndc-database/en",
-      "used_in": [
-        "RQ2"
-      ]
+      "used_in": ["RQ2"]
     },
     "Climate_Watch_NDC_Data": {
-      "description": "Climate Watch \u2014 cross-reference for time-bound commitment years across NDC rounds",
+      "description": "Climate Watch — cross-reference for time-bound commitment years across NDC rounds",
       "url": "https://www.climatewatchdata.org/ndcs",
-      "used_in": [
-        "RQ3"
-      ]
+      "used_in": ["RQ3"]
     },
     "IEA_Emissions_Data": {
-      "description": "International Energy Agency \u2014 verified emissions reduction figures by country",
+      "description": "International Energy Agency — verified emissions reduction figures by country",
       "url": "https://www.iea.org/data-and-statistics",
-      "used_in": [
-        "RQ4"
-      ]
+      "used_in": ["RQ4"]
     },
     "World_Bank_GDP": {
-      "description": "World Bank GDP per capita data \u2014 used for Spearman rho vs GDP correlation analysis",
+      "description": "World Bank GDP per capita data — used for Spearman rho vs GDP correlation analysis",
       "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "used_in": [
-        "RQ5"
-      ]
+      "used_in": ["RQ5"]
     }
   },
   "ndc_documents": {
-    "IND": {
-      "country": "India",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2026-04/INDIA%20NDC%202031-35.pdf"
+    "round3": {
+      "label": "NDC 3.0",
+      "description": "Most recent NDC submissions (2025–2026) — primary corpus for RQ1, RQ2, RQ4, RQ5",
+      "countries": {
+        "IND": {
+          "country": "India",
+          "url": "https://unfccc.int/sites/default/files/2026-04/INDIA%20NDC%202031-35.pdf"
+        },
+        "SAU": {
+          "country": "Saudi Arabia",
+          "url": "https://unfccc.int/sites/default/files/2026-01/2nd%20KSA%20NDC%20Document%20Final%20Document%20%2828122025%29_DNA.pdf"
+        },
+        "KOR": {
+          "country": "South Korea",
+          "url": "https://unfccc.int/sites/default/files/2025-12/The%20Republic%20of%20Koreas%202035%20NDC.pdf"
+        },
+        "COL": {
+          "country": "Colombia",
+          "url": "https://unfccc.int/sites/default/files/2025-12/NDC%203.0%20Transformaciones%20para%20la%20Vida%20%28Colombia%29.pdf"
+        },
+        "SLE": {
+          "country": "Sierra Leone",
+          "url": "https://unfccc.int/sites/default/files/2025-12/Sierra%20Leone%20NDC%203.0.pdf"
+        },
+        "ARM": {
+          "country": "Armenia",
+          "url": "https://unfccc.int/sites/default/files/2026-01/Armenia%27s%20NDC%203.0.pdf"
+        },
+        "GEO": {
+          "country": "Georgia",
+          "url": "https://unfccc.int/sites/default/files/2026-03/NDC_3.0_Georgia_EN.pdf"
+        },
+        "PLW": {
+          "country": "Palau",
+          "url": "https://unfccc.int/sites/default/files/2026-01/Palau%20Final%20Endorsed%20NDC%203.0.pdf"
+        },
+        "WSM": {
+          "country": "Samoa",
+          "url": "https://unfccc.int/sites/default/files/2026-01/Samoa%20NDC3.0_FINAL.pdf"
+        },
+        "NRU": {
+          "country": "Nauru",
+          "url": "https://unfccc.int/sites/default/files/2026-01/Nauru%20NDC%203.pdf"
+        }
+      }
     },
-    "SAU": {
-      "country": "Saudi Arabia",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2026-01/2nd%20KSA%20NDC%20Document%20Final%20Document%20%2828122025%29_DNA.pdf"
+    "round2": {
+      "label": "NDC 2.0",
+      "description": "Updated NDC submissions (2020–2022) — used in RQ3 temporal comparison",
+      "countries": {
+        "IND": {
+          "country": "India",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-08/India%20Updated%20First%20Nationally%20Determined%20Contrib.pdf"
+        },
+        "KOR": {
+          "country": "South Korea",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/211223_The%20Republic%20of%20Korea%27s%20Enhanced%20Update%20of%20its%20First%20Nationally%20Determined%20Contribution_211227_editorial%20change.pdf"
+        },
+        "COL": {
+          "country": "Colombia",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/NDC%20actualizada%20de%20Colombia.pdf"
+        },
+        "ARM": {
+          "country": "Armenia",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/NDC%20of%20Republic%20of%20Armenia%20%202021-2030.pdf"
+        },
+        "GEO": {
+          "country": "Georgia",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/NDC%20Georgia_ENG%20WEB-approved.pdf"
+        },
+        "SAU": {
+          "country": "Saudi Arabia",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/KSA-INDCs%20English.pdf"
+        },
+        "NRU": {
+          "country": "Nauru",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/Nauru%20Updated%20NDC%20pdf.pdf"
+        }
+      }
     },
-    "KOR": {
-      "country": "South Korea",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2025-12/The%20Republic%20of%20Koreas%202035%20NDC.pdf"
-    },
-    "COL": {
-      "country": "Colombia",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2025-12/NDC%203.0%20Transformaciones%20para%20la%20Vida%20%28Colombia%29.pdf"
-    },
-    "SLE": {
-      "country": "Sierra Leone",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2025-12/Sierra%20Leone%20NDC%203.0.pdf"
-    },
-    "ARM": {
-      "country": "Armenia",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2026-01/Armenia%27s%20NDC%203.0.pdf"
-    },
-    "GEO": {
-      "country": "Georgia",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2026-03/NDC_3.0_Georgia_EN.pdf"
-    },
-    "PLW": {
-      "country": "Palau",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2026-01/Palau%20Final%20Endorsed%20NDC%203.0.pdf"
-    },
-    "WSM": {
-      "country": "Samoa",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2026-01/Samoa%20NDC3.0_FINAL.pdf"
-    },
-    "NRU": {
-      "country": "Nauru",
-      "round": "NDC 3.0",
-      "url": "https://unfccc.int/sites/default/files/2026-01/Nauru%20NDC%203.pdf"
+    "round1": {
+      "label": "NDC 1.0",
+      "description": "Initial INDC/NDC submissions (2015–2016) — used in RQ3 temporal comparison",
+      "countries": {
+        "IND": {
+          "country": "India",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/INDIA%20INDC%20TO%20UNFCCC.pdf"
+        },
+        "KOR": {
+          "country": "South Korea",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/INDC%20Submission%20by%20the%20Republic%20of%20Korea%20on%20June%2030.pdf"
+        },
+        "COL": {
+          "country": "Colombia",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/Colombia%20iNDC%20Unofficial%20translation%20Eng.pdf"
+        },
+        "ARM": {
+          "country": "Armenia",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/INDC-Armenia.pdf"
+        },
+        "GEO": {
+          "country": "Georgia",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/NDC%20Georgia_ENG%20WEB-approved.pdf"
+        },
+        "SAU": {
+          "country": "Saudi Arabia",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/KSA-INDCs%20English.pdf"
+        },
+        "NRU": {
+          "country": "Nauru",
+          "url": "https://unfccc.int/sites/default/files/NDC/2022-06/Nauru%20Updated%20NDC%20pdf.pdf"
+        }
+      }
     }
   }
 }
